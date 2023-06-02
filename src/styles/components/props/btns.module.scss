@@ -1,0 +1,28 @@
+$offwhite: darken(white, 10%);
+
+.Btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.text {
+	text-transform: capitalize;
+	letter-spacing: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--text-color);
+	
+	width: 320px;
+    height: 45px;
+	border: none;
+    border-radius: 30px;
+    background-color: var(--btns-background-color);
+	box-shadow: 2px 4px 4px 0 rgba(255, 255, 255, 0.5);
+
+	&:hover {
+		color: var(--subtext-color);
+	}
+}

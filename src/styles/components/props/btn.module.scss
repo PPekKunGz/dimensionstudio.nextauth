@@ -1,0 +1,26 @@
+.Btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 30px;
+}
+.text {
+	text-transform: capitalize;
+	letter-spacing: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #fff;
+	
+	width: 320px;
+    height: 45px;
+	border: none;
+    border-radius: 30px;
+    background-color: var(--btn-background-color);
+    box-shadow: var(--btn-box-shadow);
+    
+    &:hover {
+		color: rgb(233, 201, 255);
+	}
+}

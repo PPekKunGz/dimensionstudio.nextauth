@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --background: white; //dark mode
+  --foreground: black; //dark mode
+  --btn-box-shadow: none; //dark mode
+  --subtext-color: white; //dark mode
+
+
+  --text-color: rgba(112, 11, 239, 1);
+  --bg-creation: rgba(255, 255, 255, 0.2);
+
+  --border: 1px solid #131325;
+  --gradient: linear-gradient(-45deg, #d000f7, #24bae3);
+  --box-shadow: 5px 5px 15px rgb(19, 19, 37), -5px -5px 15px rgb(19, 19, 37);
+  --items-shadow: 5px 5px 15px rgb(19, 19, 37), -5px -5px 15px rgb(19, 19, 37);
+  --gradient-bg: linear-gradient(-45deg, #d000f7, #24bae3);
+
+  //btn-primary
+  --btn-background-color: #700BEF;
+  --btns-background-color: rgba(112, 11, 239, 0.3);
+}
+
+[data-theme="dark"] {
+  --background: #333; //dark mode
+  --foreground: #fff; //dark mode
+  --text-color: #fff;
+  --subtext-color: #a7a7a7;
+  --bg-creation: rgb(23, 22, 24);
+  --btn-box-shadow: 2px 4px 4px 0 rgba(255, 255, 255, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none; //ของดี
+  -moz-user-select: none; //ของดี
+  user-select: none; //ของดี
+}
+
+html,
+body {
+  font-family: 'Kanit', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+  transition: background-color 0.3s ease; //dark mode
+}
+
+a {
+  color: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+.thememode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: none;
+  padding: 2px;
+  
+  &:hover {
+    background: rgb(216, 216, 216);
+  }
+}
+//<hr className={hr_mid} />
+.hr_mid {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+
+  &:before {
+    content: "";
+    background: linear-gradient(to right, transparent, #afafaf, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+  }
+}
